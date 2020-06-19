@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivam Music Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+        <!-- #player{
+            width: 300px;
+            height: 480px;
+            border-top: 30px groove red;
+            border-bottom: 30px ridge red;
+            border-radius: 30px;
+            box-shadow: 0px 0px 10px #ddd;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            
+        }
+        header{
+            width: 100%;
+            height: 70%;
+            background: url('');
+            background: linear-gradient(white,red,blue);
+            position: relative;
+
+            
+        }
+
+        footer{
+            width: 100%;
+            height: 30%;
+            background: linear-gradient(black,yellowgreen,black);
+        }
+        #controls{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: relative;
+            
+
+        }
+        #play-background{
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #progress{
+            width: 75%;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.8);
+            position: absolute;
+            top: 15px;
+            border-radius: 8px;
+        }
+        #upload{
+            margin: 10px;
+            border-radius: 150%;
+            cursor: pointer;
+            
+        }
+        #file-name{
+            color: white;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translate(-50%);
+        } -->
+    
+</head>
+<body>
+
+    <div id="player">
+        <header>
+            <img src="img/m.jpg" width="40" id="upload" onclick="upload()"> 
+            <h4 id="file-name"></h4>
+        </header>
+
+        <footer>
+            <div id="controls">
+                
+                <i class="fa fa-backward" style="color:white;font-size:30px"></i>
+                <div id="play-background">
+                <i class="fa fa-play-circle" style="color:red;font-size:70px" id="play-pause"></i>
+                </div>
+                <i class="fa fa-forward" style="color:white;font-size:30px"></i>
+                <div id="progress">
+
+                </div>
+
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- <script>
+        function upload(){
+            var input = document.createElement("INPUT");
+            input.type = "file";
+            input.accept = ".mp3";
+            input.click();
+            input.onchange = function(){
+                var song_name = this.files[0].name;
+                document.querySelector("#file-name").innerHTML = "song_name";
+                var url = URL.createObjectURL(this.files[0]);
+                var audio = document.createElement("AUDIO"); 
+                audio.src = url;
+                audio.play();
+
+                audio.onplay = function(){
+                    document.querySelector("#play-pause").className = "fa fa-pause-circle";
+
+                    document.querySelector("#play-pause").onclick = function(){
+                        audio.pause();
+                    }
+                }
+
+
+                audio.onpause = function(){
+                    document.querySelector("#play-pause").className = "fa fa-play-circle";
+
+                    document.querySelector("#play-pause").onclick = function(){
+                        audio.play();
+                    }
+                }
+
+            }
+        }
+    </script> -->
+
+    <script src="main.js"></script>
+    
+</body>
+</html>
